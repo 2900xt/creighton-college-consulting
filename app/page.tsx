@@ -182,7 +182,7 @@ function CollegeMarquee() {
       className="marquee overflow-hidden border-b border-line bg-ivy-deep py-7 text-background"
     >
       <div className="mx-auto mb-4 flex max-w-6xl items-center justify-between px-6 text-xs uppercase tracking-[0.22em] text-background/70">
-        <span>Our acceptances · Class of '26</span>
+        <span>Our acceptances · Class of '30</span>
       </div>
       <div className="flex w-max marquee-track">
         {loop.map((c, i) => (
@@ -240,9 +240,6 @@ function About() {
           <h2 className="font-serif text-4xl leading-tight tracking-tight text-ivy-deep md:text-5xl">
             Who you'd be working with.
           </h2>
-          <span className="text-xs uppercase tracking-[0.2em] text-muted">
-            The two of us · est. 2026
-          </span>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {team.map((m) => (
