@@ -35,11 +35,9 @@ const services = [
 const team = [
   {
     name: "Taha Rawjani",
-    role: "Co-founder · UPenn CS '30",
-    blurb:
-      "Engineer & researcher. Cofounder of Moby Labs (AI whale tracking, patent-pending). Believer that the best applications start with the best projects.",
+    role: "Penn CS '30",
+    photo: "/taha.jpg",
     accomplishments: [
-      "Admitted to UPenn (Engineering, CS)",
       "1540 SAT · 4.63 GPA (Summa Cum Laude) · 16 AP exams, all 5s",
       "Regeneron ISEF Grand Award (4th Place) + Presidential Scholarship",
       "Cofounder & CTO, Moby Labs — patent-pending tech",
@@ -51,16 +49,15 @@ const team = [
   },
   {
     name: "Shaurya Jeevegan",
-    role: "Co-founder · UPenn Math '30",
-    blurb:
-      "Researcher & builder. ML for healthcare, physics-informed AI, and the kind of nonprofit work that actually scales.",
-    accomplishments: [
-      "Co-authored research accepted to IEEE 2025 Int'l Conf. on Engineering & Computing Technologies",
+    role: "Penn Math '30",
+    photo: "/shaurya.jpg",
+    accomplishments: [      
       "1590 SAT · 4.7 GPA · 15 AP exams, all 5s",
-      "Built GaitGuard, an ML-based fall risk detector — 4 awards including IEEE Tech Achievement & MIT Club of DC",
-      "Research Intern at Harvard Undergraduate OpenBio Lab — physics-informed AI for PM2.5 air pollution",
-      "Cofounder & Lead Instructor, Code4All — taught 1,000+ elementary students Java across 45+ classes",
-      "Virginia Governor's School for Math, Science & Tech — 1 of 159 selected statewide",
+      "Co-authored research accepted to IEEE 2025 Int'l Conf",
+      "Built GaitGuard, an ML-based fall risk detector — 4 awards including IEEE & MIT Club",
+      "Research Intern at Harvard Undergraduate OpenBio Lab — physics-informed AI",
+      "Cofounder & Lead Instructor, Code4All — taught 1,000+ elementary students",
+      "Virginia Governor's School for Math, Science & Tech",
     ],
   },
 ];
@@ -186,7 +183,6 @@ function CollegeMarquee() {
     >
       <div className="mx-auto mb-4 flex max-w-6xl items-center justify-between px-6 text-xs uppercase tracking-[0.22em] text-background/70">
         <span>Our acceptances · Class of '26</span>
-        <span className="hidden sm:inline">Always spinning ↻</span>
       </div>
       <div className="flex w-max marquee-track">
         {loop.map((c, i) => (
@@ -254,22 +250,21 @@ function About() {
               key={m.name}
               className="flex flex-col rounded-2xl border border-line bg-background p-7"
             >
-              <div className="flex items-start gap-4">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-full bg-ivy font-serif text-xl text-background">
-                  {m.name
-                    .split(" ")
-                    .map((p) => p[0])
-                    .join("")
-                    .slice(0, 2)}
-                </div>
+              <div className="flex items-center gap-4">
+                <Image
+                  src={m.photo}
+                  alt={m.name}
+                  width={112}
+                  height={112}
+                  className="size-14 shrink-0 rounded-full border border-line object-cover"
+                />
                 <div>
                   <h3 className="font-serif text-2xl leading-tight tracking-tight text-ivy-deep">
                     {m.name}
                   </h3>
-                  <p className="mt-0.5 text-xs uppercase tracking-[0.16em] text-accent">
+                  <p className="mt-1 text-xs uppercase tracking-[0.16em] text-accent">
                     {m.role}
                   </p>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">{m.blurb}</p>
                 </div>
               </div>
               <ul className="mt-6 space-y-2.5 text-sm leading-relaxed text-foreground">
@@ -340,7 +335,7 @@ function FinalCta() {
             Your first call is on us.
           </h2>
           <p className="mt-2 max-w-lg text-sm text-background/70 md:text-base">
-            Thirty minutes. No pitch. Bring your list, your essays, your worries — leave
+            Thirty minutes. Bring your list, your goals, your worries — leave
             with a plan.
           </p>
         </div>
